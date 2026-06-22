@@ -10,11 +10,35 @@ body {
     color: #f8fafc;
     padding: 20px;
     line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container-acessibilidade {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+.botao-tema {
+    background-color: #334155;
+    color: #f8fafc;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.botao-tema:hover {
+    background-color: #475569;
 }
 
 .cabecalho {
     text-align: center;
-    margin: 40px auto;
+    margin: 20px auto 40px auto;
     max-width: 800px;
 }
 
@@ -43,6 +67,7 @@ body {
     padding: 30px;
     width: 100%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
 }
 
 h2 {
@@ -53,7 +78,7 @@ h2 {
 
 h3 {
     color: #38bdf8;
-    margin: 20px 0 10px 0;
+    margin: 25px 0 10px 0;
     font-size: 1.2rem;
 }
 
@@ -69,31 +94,7 @@ ul {
 }
 
 ul li {
-    margin-bottom: 8px;
-}
-
-.grade-dicas {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.item-dica {
-    background-color: #121824;
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 4px solid #38bdf8;
-}
-
-.item-dica h4 {
-    color: #f8fafc;
-    margin-bottom: 5px;
-}
-
-.item-dica p {
-    margin-bottom: 0;
-    font-size: 0.95rem;
+    margin-bottom: 12px;
 }
 
 .grupo-opcoes {
@@ -121,7 +122,7 @@ legend {
     padding: 10px;
     border-radius: 6px;
     background-color: #121824;
-    transition: background 0.2s;
+    transition: background-color 0.2s;
 }
 
 .opcao-resposta:hover {
@@ -192,6 +193,62 @@ legend {
     color: #64748b;
     font-size: 0.9rem;
 }
+
+body.modo-claro {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+body.modo-claro .botao-tema {
+    background-color: #cbd5e1;
+    color: #0f172a;
+}
+
+body.modo-claro .cabecalho h1, 
+body.modo-claro h2, 
+body.modo-claro h3, 
+body.modo-claro legend {
+    color: #0284c7;
+}
+
+body.modo-claro .cabecalho p {
+    color: #475569;
+}
+
+body.modo-claro .card-conteudo {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro p, 
+body.modo-claro ul {
+    color: #334155;
+}
+
+body.modo-claro .grupo-opcoes {
+    border-color: #e2e8f0;
+}
+
+body.modo-claro .opcao-resposta {
+    background-color: #f8fafc;
+}
+
+body.modo-claro .opcao-resposta:hover {
+    background-color: #e2e8f0;
+}
+
+body.modo-claro .botao-acao {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+body.modo-claro .botao-acao:hover {
+    background-color: #0369a1;
+}
+
+body.modo-claro .sucesso { background-color: #d1fae5; border-color: #10b981; color: #065f46; }
+body.modo-claro .atencao { background-color: #fef3c7; border-color: #f59e0b; color: #78350f; }
+body.modo-claro .erro { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
 
 @media (max-width: 768px) {
     body {
