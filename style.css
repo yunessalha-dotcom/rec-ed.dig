@@ -9,14 +9,32 @@ body {
     background-color: #121824;
     color: #f8fafc;
     padding: 20px;
+    line-height: 1.6;
+}
+
+.cabecalho {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.cabecalho h1 {
+    color: #38bdf8;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.cabecalho p {
+    color: #94a3b8;
+    font-size: 1.1rem;
 }
 
 .container-principal {
     max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .card-conteudo {
@@ -29,19 +47,60 @@ body {
 
 h2 {
     color: #38bdf8;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+h3 {
+    color: #38bdf8;
+    margin: 20px 0 10px 0;
+    font-size: 1.2rem;
 }
 
 p {
     color: #cbd5e1;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+.grade-dicas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.item-dica {
+    background-color: #121824;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #38bdf8;
+}
+
+.item-dica h4 {
+    color: #f8fafc;
+    margin-bottom: 5px;
+}
+
+.item-dica p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
 }
 
 .grupo-opcoes {
     border: 2px solid #334155;
     border-radius: 8px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 25px 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -51,6 +110,7 @@ legend {
     color: #38bdf8;
     padding: 0 10px;
     font-weight: bold;
+    font-size: 1.05rem;
 }
 
 .opcao-resposta {
@@ -58,25 +118,32 @@ legend {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    padding: 8px;
+    padding: 10px;
     border-radius: 6px;
+    background-color: #121824;
     transition: background 0.2s;
 }
 
 .opcao-resposta:hover {
-    background-color: #334155;
+    background-color: #243249;
+}
+
+.opcao-resposta input {
+    cursor: pointer;
+    scale: 1.1;
 }
 
 .botao-acao {
     background-color: #38bdf8;
     color: #0f172a;
     border: none;
-    padding: 12px 24px;
+    padding: 14px 28px;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s;
+    width: 100%;
 }
 
 .botao-acao:hover {
@@ -96,6 +163,12 @@ legend {
     color: #ecfdf5;
 }
 
+.atencao {
+    background-color: #78350f;
+    border-color: #f59e0b;
+    color: #fef3c7;
+}
+
 .erro {
     background-color: #7f1d1d;
     border-color: #ef4444;
@@ -103,7 +176,7 @@ legend {
 }
 
 .estatistica {
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: 0.85rem;
     font-weight: bold;
     color: #94a3b8;
@@ -113,15 +186,18 @@ legend {
     display: none;
 }
 
+.rodape {
+    text-align: center;
+    margin: 50px 0 20px 0;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
 @media (max-width: 768px) {
-    .container-principal {
-        margin: 10px auto;
-        padding: 0;
+    body {
+        padding: 10px;
     }
     .card-conteudo {
         padding: 20px;
-    }
-    .botao-acao {
-        width: 100%;
     }
 }
