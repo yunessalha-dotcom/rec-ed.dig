@@ -5,6 +5,11 @@ const painelResultado = document.getElementById('painel-resultado');
 const tituloResultado = document.getElementById('titulo-resultado');
 const mensagemResultado = document.getElementById('mensagem-resultado');
 const elementoContador = document.getElementById('contador-tentativas');
+const btnTema = document.getElementById('btn-tema');
+
+btnTema.addEventListener('click', function() {
+    document.body.classList.toggle('modo-claro');
+});
 
 formQuiz.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -35,11 +40,11 @@ formQuiz.addEventListener('submit', function(event) {
         classeEstilo = "sucesso";
     } else if (acertos === 2 || acertos === 1) {
         textoTitulo = "⚠️ Atenção! Você acertou " + acertos + " de 3";
-        textoMensagem = "Bom esforço, mas você ainda corre riscos de ser enganado por mídias geradas por IA. Revise as dicas do guia de prevenção acima e tente novamente.";
+        textoMensagem = "Bom esforço, mas você ainda corre riscos de ser enganado por mídias geradas por IA. Revise as dicas estruturadas no texto educacional acima e tente novamente.";
         classeEstilo = "atencao";
     } else {
         textoTitulo = "❌ Cuidado! 0/3 Acertos";
-        textoMensagem = "Você errou todas as questões. Recomenda-se reler atentamente o conteúdo educativo do site para evitar cair em golpes de engenharia social ou compartilhar desinformação.";
+        textoMensagem = "Você errou todas as questões. Recomenda-se ler as seções de orientação biométrica e clonagem de voz acima para entender os padrões fundamentais de segurança.";
         classeEstilo = "erro";
     }
 
