@@ -1,119 +1,127 @@
-/* ==========================================
-   1. RESET & CONFIGURAÇÕES GERAIS
-   ========================================== */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que padding e margin não quebrem o width */
+    box-sizing: border-box;
 }
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #121824;
     color: #f8fafc;
-    line-height: 1.6;
     padding: 20px;
 }
 
-/* ==========================================
-   2. HIERARQUIA TIPOGRÁFICA (FONTES)
-   ========================================== */
-h1 {
-    font-size: 2.5rem;
-    color: #38bdf8;
-    margin-bottom: 10px;
+.container-principal {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-conteudo {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-    font-size: 1.8rem;
     color: #38bdf8;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #1e293b;
-    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 p {
-    font-size: 1rem;
     color: #cbd5e1;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* ==========================================
-   3. LAYOUT COM FLEXBOX (MAIN & SECTIONS)
-   ========================================== */
-header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 20px;
-}
-
-/* O container 'main' distribui as seções pelo site */
-main {
-    max-width: 1100px;
-    margin: 0 auto; /* Centraliza o site na tela */
-    display: flex;
-    flex-direction: column; /* Organiza as seções em linha vertical */
-    gap: 30px; /* Espaçamento inteligente entre as seções */
-}
-
-/* Estilização dos blocos de conteúdo (cards) */
-section {
-    background-color: #1e293b;
-    padding: 30px;
+.grupo-opcoes {
+    border: 2px solid #334155;
     border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-/* ==========================================
-   4. INTERATIVIDADE & FORMULÁRIOS
-   ========================================== */
-form {
+    padding: 20px;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
-
-fieldset {
-    border: 1px solid #38bdf8;
-    border-radius: 6px;
-    padding: 20px;
+    gap: 12px;
 }
 
 legend {
-    padding: 0 10px;
     color: #38bdf8;
+    padding: 0 10px;
     font-weight: bold;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
+.opcao-resposta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background 0.2s;
 }
 
-button {
+.opcao-resposta:hover {
+    background-color: #334155;
+}
+
+.botao-acao {
     background-color: #38bdf8;
     color: #0f172a;
-    font-weight: bold;
     border: none;
-    padding: 12px 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s ease;
-    align-self: flex-start; /* Faz o botão ocupar apenas o seu tamanho */
+    transition: background 0.3s;
 }
 
-button:hover {
+.botao-acao:hover {
     background-color: #0ea5e9;
 }
 
-/* ==========================================
-   5. RODAPÉ
-   ========================================== */
-footer {
-    text-align: center;
-    margin-top: 50px;
+.alerta-resultado {
+    margin-top: 25px;
     padding: 20px;
-    color: #64748b;
-    font-size: 0.9rem;
+    border-radius: 8px;
+    border-left: 5px solid;
+}
+
+.sucesso {
+    background-color: #064e3b;
+    border-color: #10b981;
+    color: #ecfdf5;
+}
+
+.erro {
+    background-color: #7f1d1d;
+    border-color: #ef4444;
+    color: #fef2f2;
+}
+
+.estatistica {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #94a3b8;
+}
+
+.ocultar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container-principal {
+        margin: 10px auto;
+        padding: 0;
+    }
+    .card-conteudo {
+        padding: 20px;
+    }
+    .botao-acao {
+        width: 100%;
+    }
 }
