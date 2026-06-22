@@ -9,28 +9,37 @@ const elementoContador = document.getElementById('contador-tentativas');
 formQuiz.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const opcaoSelecionada = document.querySelector('input[name="resposta_usuario"]:checked');
+    const r1 = document.querySelector('input[name="p1"]:checked');
+    const r2 = document.querySelector('input[name="p2"]:checked');
+    const r3 = document.querySelector('input[name="p3"]:checked');
 
-    if (!opcaoSelecionada) {
-        alert("Por favor, selecione uma das alternativas antes de enviar!");
+    if (!r1 || !r2 || !r3) {
+        alert("Por favor, responda todas as 3 perguntas antes de verificar!");
         return;
     }
 
-    totalTentativas = totalTentativas + 1; 
-    const respostaDoUsuario = opcaoSelecionada.value;
-    const respostaCorreta = 'falso';
-    
+    totalTentativas = totalTentativas + 1;
+
+    let acertos = 0;
+    if (r1.value === 'correto') acertos++;
+    if (r2.value === 'correto') acertos++;
+    if (r3.value === 'correto') acertos++;
+
     let textoTitulo = "";
     let textoMensagem = "";
     let classeEstilo = "";
 
-    if (respostaDoUsuario === respostaCorreta) {
-        textoTitulo = "🎉 Resposta Correta!";
-        textoMensagem = "Exatamente! As ferramentas modernas de IA generativa conseguem simular nuances emocionais, respiração e entonação perfeitamente. Fique atento: não confie apenas no 'tom de voz' para validar uma informação.";
+    if (acertos === 3) {
+        textoTitulo = "🎉 Excelente! 3/3 Acertos";
+        textoMensagem = "Você demonstrou domínio total sobre os mecanismos de defesa digital! Sabe reconhecer anomalias visuais, falhas sonoras e possui a postura correta de checagem contra boatos.";
         classeEstilo = "sucesso";
+    } else if (acertos === 2 || acertos === 1) {
+        textoTitulo = "⚠️ Atenção! Você acertou " + acertos + " de 3";
+        textoMensagem = "Bom esforço, mas você ainda corre riscos de ser enganado por mídias geradas por IA. Revise as dicas do guia de prevenção acima e tente novamente.";
+        classeEstilo = "atencao";
     } else {
-        textoTitulo = "❌ Resposta Incorreta.";
-        textoMensagem = "Cuidado! Esse é um mito perigoso. Atualmente, clonagens de áudio via IA replicam emoções complexas de forma assustadoramente realista, sendo usadas frequentemente em golpes de engenharia social.";
+        textoTitulo = "❌ Cuidado! 0/3 Acertos";
+        textoMensagem = "Você errou todas as questões. Recomenda-se reler atentamente o conteúdo educativo do site para evitar cair em golpes de engenharia social ou compartilhar desinformação.";
         classeEstilo = "erro";
     }
 
@@ -38,6 +47,6 @@ formQuiz.addEventListener('submit', function(event) {
     mensagemResultado.textContent = textoMensagem;
     elementoContador.textContent = totalTentativas;
 
-    painelResultado.className = `alerta-resultado ${classeEstilo}`; 
+    painelResultado.className = `alerta-resultado ${classeEstilo}`;
     painelResultado.classList.remove('ocultar');
 });
