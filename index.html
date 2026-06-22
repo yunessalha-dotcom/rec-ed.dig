@@ -3,66 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital - Combate a Deepfakes</title>
+    <title>Cidadania Digital 2026 - Detector de Deepfakes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Olho Vivo: Cidadania Digital contra Deepfakes</h1>
-        <p>Aprenda a identificar mídias manipuladas por IA e proteja-se da desinformação.</p>
-    </header>
+    <main class="container-principal">
+        <section class="card-conteudo">
+            <h2>🔍 Quiz de Percepção Digital</h2>
+            <p>Avalie a frase: <em>"Deepfakes de áudio (clonagem de voz) são fáceis de detectar porque a voz gerada por IA nunca tem entonação emocional."</em></p>
 
-    <main>
-
-        <section id="sobre-deepfakes">
-            <h2>O que são Deepfakes?</h2>
-            <p>Deepfakes são vídeos, áudios ou imagens criados ou alterados por Inteligência Artificial para fazer parecer que alguém disse ou fez algo que não aconteceu na realidade.</p>
-        </section>
-
-        <section id="perigos-desinformacao">
-            <h2>Os Perigos da Desinformação Automatizada</h2>
-            <p>A velocidade com que a IA pode criar notícias falsas é alarmante. Isso pode afetar reputações, manipular eleições e espalhar pânico de forma generalizada.</p>
-        </section>
-
-        <section id="interatividade">
-            <h2>Teste seus Olhos: É Real ou IA?</h2>
-            <p>Responda ao formulário abaixo para ver se você consegue identificar os sinais de uma mídia manipulada.</p>
-            
-            <form id="quiz-deepfake">
-                <fieldset>
-                    <legend>Pergunta 1: Qual destes sinais costuma denunciar um vídeo de Deepfake?</legend>
+            <form id="formulario-quiz">
+                <fieldset class="grupo-opcoes">
+                    <legend>Essa afirmação é Verdadeira ou Falsa?</legend>
                     
-                    <label>
-                        <input type="radio" name="pergunta1" value="a"> Piscadas de olhos pouco naturais ou ausentes.
-                    </label><br>
+                    <label class="opcao-resposta">
+                        <input type="radio" name="resposta_usuario" value="verdadeiro">
+                        <span>Verdadeiro (A IA não replica emoções)</span>
+                    </label>
                     
-                    <label>
-                        <input type="radio" name="pergunta1" value="b"> Áudio com qualidade de estúdio perfeita.
-                    </label><br>
-                    
-                    <label>
-                        <input type="radio" name="pergunta1" value="c"> Cores muito vibrantes no fundo.
+                    <label class="opcao-resposta">
+                        <input type="radio" name="resposta_usuario" value="falso">
+                        <span>Falso (As IAs atuais já replicam choros, risos e pausas respiratórias)</span>
                     </label>
                 </fieldset>
 
-                <br>
-
-                <button type="submit">Enviar Respostas</button>
+                <button type="submit" class="botao-acao">Enviar Resposta</button>
             </form>
-        </section>
 
+            <div id="painel-resultado" class="alerta-resultado ocultar">
+                <h3 id="titulo-resultado"></h3>
+                <p id="mensagem-resultado"></p>
+                <div class="estatistica">
+                    Tentativas nesta sessão: <span id="contador-tentativas">0</span>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Projeto Cidadania Digital. Todos os direitos reservados.</p>
-        <p>Hashtag oficial do projeto: <strong>#cidadaniadigital2026</strong></p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital - Combate a Deepfakes</title>
-    <link rel="stylesheet" href="style.css">
-</head>
