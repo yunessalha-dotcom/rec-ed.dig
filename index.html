@@ -3,43 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital 2026 - Detector de Deepfakes</title>
+    <title>Cidadania Digital 2026 - Guia Antifraude e Deepfakes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <header class="cabecalho">
+        <h1>Olho Vivo: Cidadania Digital contra Deepfakes</h1>
+        <p>Aprenda a reconhecer manipulações por Inteligência Artificial e proteja-se da desinformação.</p>
+    </header>
+
     <main class="container-principal">
+        
         <section class="card-conteudo">
-            <h2>🔍 Quiz de Percepção Digital</h2>
-            <p>Avalie a frase: <em>"Deepfakes de áudio (clonagem de voz) são fáceis de detectar porque a voz gerada por IA nunca tem entonação emocional."</em></p>
+            <h2>O que são Deepfakes e como funcionam?</h2>
+            <p>Deepfakes são mídias (vídeos, imagens ou áudios) sintetizadas por Inteligência Artificial. Utilizando redes neurais profundas, sistemas de computador conseguem mapear o rosto ou a voz de uma pessoa real e transplantá-los para o corpo ou fala de outra, criando simulações altamente realistas.</p>
+            
+            <h3>Os Perigos da Desinformação Automatizada</h3>
+            <p>A produção em massa dessas mídias gera riscos severos para a sociedade, tais como:</p>
+            <ul>
+                <li><strong>Fraudes Financeiras:</strong> Golpistas clonam a voz de familiares simulando emergências para extorquir dinheiro.</li>
+                <li><strong>Manipulação Política:</strong> Criação de discursos falsos de candidatos para inflamar eleitores e adulterar o debate público.</li>
+                <li><strong>Danos à Reputação:</strong> Difamação de indivíduos comuns ou figuras públicas por meio de montagens humilhantes.</li>
+            </ul>
+        </section>
+
+        <section class="card-conteudo">
+            <h2>Guia Prático de Prevenção: Como Identificar</h2>
+            <p>Embora a tecnologia esteja evoluindo, a maioria das manipulações digitais ainda deixa rastros sutis que podem ser detectados com atenção:</p>
+            
+            <div class="grade-dicas">
+                <div class="item-dica">
+                    <h4>👁️ Inconsistências Oculares</h4>
+                    <p>Observe se a pessoa pisca de forma natural. Muitas ferramentas de IA falham em sincronizar o piscar dos olhos ou em gerar reflexos de luz realistas nas pupilas.</p>
+                }
+                <div class="item-dica">
+                    <h4>👄 Sincronia Labial e Textura</h4>
+                    <p>Repare se o movimento da boca condiz exatamente com o som emitido. Verifique também as bordas do rosto: áreas borradas perto das orelhas ou pescoço indicam montagem.</p>
+                }
+                <div class="item-dica">
+                    <h4>🎙️ Ruídos e Metalização no Áudio</h4>
+                    <p>Clonagens de voz costumam apresentar cortes abruptos, falta de respiração natural entre as frases ou um leve eco metálico de fundo.</p>
+                }
+            </div>
+        </section>
+
+        <section class="card-conteudo">
+            <h2>🧠 Desafio Antidesinformação</h2>
+            <p>Coloque seu conhecimento à prova respondendo às 3 questões abaixo antes de enviar seu relatório.</p>
 
             <form id="formulario-quiz">
+                
                 <fieldset class="grupo-opcoes">
-                    <legend>Essa afirmação é Verdadeira ou Falsa?</legend>
-                    
+                    <legend>Questão 1: Qual falha visual é um indício clássico de um vídeo deepfake?</legend>
                     <label class="opcao-resposta">
-                        <input type="radio" name="resposta_usuario" value="verdadeiro">
-                        <span>Verdadeiro (A IA não replica emoções)</span>
+                        <input type="radio" name="p1" value="errado">
+                        <span>A presença de legendas automáticas coloridas no rodapé.</span>
                     </label>
-                    
                     <label class="opcao-resposta">
-                        <input type="radio" name="resposta_usuario" value="falso">
-                        <span>Falso (As IAs atuais já replicam choros, risos e pausas respiratórias)</span>
+                        <input type="radio" name="p1" value="correto">
+                        <span>Piscadas de olhos ausentes, rígidas ou dessincronizadas com o rosto.</span>
+                    </label>
+                    <label class="opcao-resposta">
+                        <input type="radio" name="p1" value="errado">
+                        <span>O formato quadrado do vídeo nas redes sociais.</span>
                     </label>
                 </fieldset>
 
-                <button type="submit" class="botao-acao">Enviar Resposta</button>
+                <fieldset class="grupo-opcoes">
+                    <legend>Questão 2: Sobre a clonagem de voz por IA, qual afirmação está correta?</legend>
+                    <label class="opcao-resposta">
+                        <input type="radio" name="p2" value="errado">
+                        <span>As ferramentas de áudio são incapazes de simular choros ou tosses.</span>
+                    </label>
+                    <label class="opcao-resposta">
+                        <input type="radio" name="p2" value="errado">
+                        <span>O áudio gerado por IA sempre dura no máximo trinta segundos.</span>
+                    </label>
+                    <label class="opcao-resposta">
+                        <input type="radio" name="p2" value="correto">
+                        <span>IAs conseguem replicar sotaques e emoções, exigindo atenção a cortes secos e robóticos.</span>
+                    </label>
+                </fieldset>
+
+                <fieldset class="grupo-opcoes">
+                    <legend>Questão 3: Recebeu um vídeo alarmante de uma figura pública pedindo dinheiro. O que fazer?</legend>
+                    <label class="opcao-resposta">
+                        <input type="radio" name="p3" value="correto">
+                        <span>Desconfiar imediatamente, checar canais oficiais e agências de jornalismo.</span>
+                    </label>
+                    <label class="opcao-resposta">
+                        <input type="radio" name="p3" value="errado">
+                        <span>Compartilhar nos grupos de família para alertar a todos rapidamente.</span>
+                    </label>
+                    <label class="opcao-resposta">
+                        <input type="radio" name="p3" value="errado">
+                        <span>Acreditar se a imagem do rosto parecer nítida e de alta qualidade.</span>
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="botao-acao">Verificar Resultados</button>
             </form>
 
             <div id="painel-resultado" class="alerta-resultado ocultar">
                 <h3 id="titulo-resultado"></h3>
                 <p id="mensagem-resultado"></p>
                 <div class="estatistica">
-                    Tentativas nesta sessão: <span id="contador-tentativas">0</span>
+                    Tentativas realizadas: <span id="contador-tentativas">0</span>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Projeto Cidadania Digital | #cidadaniadigital2026</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
